@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .habit-wheel {
+    @apply relative w-64 h-64 mx-auto;
+  }
+  
+  .habit-segment {
+    @apply absolute inset-0 rounded-full transition-transform duration-300;
+  }
+  
+  .habit-segment.active {
+    @apply scale-105;
+  }
+  
+  .spinner-button {
+    @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+    @apply w-12 h-12 bg-surface rounded-full shadow-card;
+    @apply flex items-center justify-center cursor-pointer;
+    @apply hover:scale-110 transition-transform duration-200;
+  }
+  
+  .streak-badge {
+    @apply bg-accent text-white px-3 py-1 rounded-full text-sm font-medium;
+  }
+  
+  .habit-option {
+    @apply flex items-center justify-between p-4 bg-surface rounded-lg shadow-card;
+    @apply border-2 border-transparent hover:border-primary transition-colors duration-200;
+  }
+  
+  .habit-option.selected {
+    @apply border-primary bg-primary/5;
+  }
+}
+
+@keyframes spin-wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1440deg);
+  }
+}
+
+.spinning {
+  animation: spin-wheel 3s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
