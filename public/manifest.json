@@ -9,7 +9,13 @@
     "subtitle": "Spin your daily habit, build momentum",
     "description": "A Base MiniApp that provides users with a randomized daily habit suggestion to foster consistency and track progress.",
     "primaryCategory": "lifestyle",
-    "tags": ["habits", "productivity", "wellness", "daily", "tracking"],
+    "tags": [
+      "habits",
+      "productivity",
+      "wellness",
+      "daily",
+      "tracking"
+    ],
     "heroImageUrl": "https://habitflow.example.com/hero.png",
     "tagline": "Build better habits, one spin at a time",
     "ogTitle": "HabitFlow - Daily Habit Spinner",
